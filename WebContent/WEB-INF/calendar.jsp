@@ -31,52 +31,7 @@
 	function init() {
 		scheduler.config.xml_date="%Y-%m-%d %H:%i";
 		scheduler.init('scheduler_here',new Date(2017,08,18),"month");
-		//scheduler.load("${pageContext.request.contextPath}/resources/data/events.xml");
-		scheduler.showLightbox = function(id) {
-		
-			    $( "#dialog-confirm" ).dialog({
-			      resizable: false,
-			      height: "auto",
-			      width: 400,
-			      modal: true,
-			      buttons: {
-			        "Delete all items": function() {
-			          $( this ).dialog( "close" );
-			        },
-			        Cancel: function() {
-			          $( this ).dialog( "close" );
-			        }
-			      }
-			    });
-			  
-		}
-
-	var dp = new dataProcessor("data/events.php");
-		dp.init(scheduler);
-		 
-		(function(dp){
-		    var pendingChanges;
-		 
-		    dp.attachEvent("onBeforeUpdate", function(id, state, data){
-		        pendingChanges = true;
-		        return true;
-		    });
-		 
-		    dp.attachEvent("onAfterUpdate", function(id, action, tid, response){
-		        pendingChanges = false;
-		        return true;
-		    });
-		 
-		    window.onbeforeunload = function(e) {
-		        if(pendingChanges){
-		            var dialogText = 'Are you sure want to quit?';
-		            e.returnValue = dialogText;
-		            return dialogText;
-		        }else{
-		            return null;
-		        }
-		    };
-		})(dp);
+		scheduler.load("${pageContext.request.contextPath}/resources/data/events.xml");
 	}
 </script>
 
