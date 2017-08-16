@@ -8,7 +8,7 @@ public class HelloCtrl {
 	
 	@RequestMapping("/")
 	public String home() {
-		return "redirect:/accueil";
+		return "redirect:/etablissement/list";
 	}
 	
 	@RequestMapping("/accueil")
