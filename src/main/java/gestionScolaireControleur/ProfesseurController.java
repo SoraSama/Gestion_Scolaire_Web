@@ -1,10 +1,15 @@
 package gestionScolaireControleur;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -59,6 +64,13 @@ public class ProfesseurController {
 		model.addAttribute("etablissements", etablissements);
 
 		return "professeur/professeurEdit";
+	}
+	
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+	    SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+	    sdf.setLenient(true);
+	    binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
 	}
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
