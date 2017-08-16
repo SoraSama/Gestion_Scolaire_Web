@@ -49,4 +49,6 @@
 		<property name="validationMessageSource" ref="messageSource" />
 	</bean>
 
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
 </beans>
