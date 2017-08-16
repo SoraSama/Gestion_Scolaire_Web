@@ -219,14 +219,13 @@
 	<div class="container">
 		<fieldset>
 			<legend>Liste des matieres</legend>
-			<table class="table table-striped">
+			<table class="table table-striped" >
 				<tr>
 					<th>Id</th>
 					<th>Version</th>
 					<th>Nom</th>
 					<th>Couleur</th>
-					<th></th>
-					<th></th>
+			
 				</tr>
 
 				<c:forEach items="${matieres}" var="matiere">
