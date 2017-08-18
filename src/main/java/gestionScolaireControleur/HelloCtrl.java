@@ -8,12 +8,12 @@ public class HelloCtrl {
 	
 	@RequestMapping("/")
 	public String home() {
-		return "redirect:/etablissement/list";
+		return "redirect:/login/list";
 	}
 	
 	@RequestMapping("/accueil")
 	public String bonjour() {
-		return "accueil";
+		return "login/loginProcess";
 	}
 
 }

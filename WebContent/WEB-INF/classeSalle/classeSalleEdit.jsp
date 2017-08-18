@@ -55,156 +55,61 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="accueil">SB Admin</a>
+               <a class="navbar-brand" href="accueil"> <i class="fa fa-home"></i> Accueil </a>
             </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu message-dropdown">
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><strong>John Smith</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-footer">
-                            <a href="#">Read All New Messages</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            
+            
+                        
+              <ul class="nav navbar-center top-nav">
+              <h3 style="color:white" align="center"> Gestion Scolaire en ligne  </h3>
+                    </ul>                     
+               
+            
+            
+              <ul class="nav navbar-right top-nav">
+            
+              <h3 style="color:white"> Bienvenue  </h3>
+			   <a href="<c:url value="/logout"/>">logout</a>     
+               </ul>
+
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                           
-                    <li class="active">
-                        <a href="aeroport/list"><i class="fa fa-fw fa-dashboard"></i> Aeroport</a>
+                    <li>
+                        <a href="http://localhost:8080//GestionScolaireWeb/classe/list"> Classes</a>
                     </li>
                     <li>
-                        <a href="vol/list"><i class="fa fa-fw fa-bar-chart-o"></i> Vol</a>
+                        <a href="http://localhost:8080//GestionScolaireWeb/matiere/list"> Matieres</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost:8080//GestionScolaireWeb/professeur/list"> Professeurs </a>
                     </li>
                     <li>
-                        <a href="calendar"><i class="fa fa-fw fa-table"></i> Emplois du temps</a>
+                        <a href="http://localhost:8080//GestionScolaireWeb/salle/list">Salles</a>
                     </li>
                     <li>
-                        <a href="reservation/list"><i class="fa fa-fw fa-edit"></i> Reservation</a>
-                    </li>
-                    <li>
-                        <a href="passager/list"><i class="fa fa-fw fa-desktop"></i>Passager</a>
-                    </li>
-                    <li>
-                        <a href="escale/list"><i class="fa fa-fw fa-wrench"></i>Escale</a>
+                        <a href="http://localhost:8080//GestionScolaireWeb/utilisateur/list">Utilisateurs</a>
                     </li>
                       <li>
-                        <a href="client/list"><i class="fa fa-fw fa-wrench"></i>Client</a>
+                        <a href="http://localhost:8080//GestionScolaireWeb/etablissement/list">Etablissement</a>
                     </li>
                     
-                      <li>
-                        <a href="ville/list"><i class="fa fa-fw fa-wrench"></i> Ville</a>
-                    </li>
-            
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
+                        <a href="http://localhost:8080//GestionScolaireWeb/classeMatiere/list"> Classe Matiere </a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost:8080//GestionScolaireWeb/classeProfesseur/list"> Classe Professeur </a>
                     </li>
                     <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                        <a href="http://localhost:8080//GestionScolaireWeb/classeSalle/list"> Classe Salle </a>
                     </li>
+                    
                     <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
+                        <a href="http://localhost:8080//GestionScolaireWeb/calendar"> Emplois du temps</a>
+                    </li>   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

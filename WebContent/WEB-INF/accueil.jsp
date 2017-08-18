@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>teq2</title>
+    <title>Application de Gestion Scolaire</title>
 
 
 
@@ -41,12 +42,12 @@
 
 </head>
 
-<body>
+<body  background="https://s-media-cache-ak0.pinimg.com/originals/14/f7/a4/14f7a44ce79c79a64ab73c5c15c6e6d7.jpg">
 
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -55,9 +56,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="accueil">SB Admin</a>
+                <a class="navbar-brand" href="accueil"> <i class="fa fa-home"></i> Accueil </a>
             </div>
-            <!-- Top Menu Items -->
+            
+            
+                        
+              <ul class="nav navbar-center top-nav">
+              <h3 style="color:white" align="center"> Gestion Scolaire en ligne  </h3>
+                    </ul>                     
+               
+            
+            
+              <ul class="nav navbar-right top-nav">
+            
+              <h3 style="color:white"> Bienvenue  </h3>
+			   <a href="<c:url value="/login/list"/>">logout</a>     
+               </ul>
+                                        
+<!--             Top Menu Items
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
@@ -157,139 +173,58 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                           
-                    <li class="active">
-                        <a href="aeroport/list"><i class="fa fa-fw fa-dashboard"></i> Aeroport</a>
-                    </li>
                     <li>
-                        <a href="vol/list"><i class="fa fa-fw fa-bar-chart-o"></i> Vol</a>
-                    </li>
-                    <li>
-                        <a href="calendar"><i class="fa fa-fw fa-table"></i> Emplois du temps</a>
-                    </li>
-                    <li>
-                        <a href="reservation/list"><i class="fa fa-fw fa-edit"></i> Reservation</a>
-                    </li>
-                    <li>
-                        <a href="passager/list"><i class="fa fa-fw fa-desktop"></i>Passager</a>
-                    </li>
-                    <li>
-                        <a href="escale/list"><i class="fa fa-fw fa-wrench"></i>Escale</a>
-                    </li>
-                      <li>
-                        <a href="client/list"><i class="fa fa-fw fa-wrench"></i>Client</a>
+                        <a href="<c:url value="/classe/list"/>"> <i class="fa fa-group"> </i> Classes</a>
                     </li>
                     
-                      <li>
-                        <a href="ville/list"><i class="fa fa-fw fa-wrench"></i> Ville</a>
-                    </li>
-            
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
+                        <a href="<c:url value="/matiere/list"/>"> <i class="fa fa-book"></i> Matieres</a>
                     </li>
+
                     <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                        <a href="<c:url value="/professeur/list"/>">  <i class="fa fa-mortar-board"></i> Professeurs </a>
                     </li>
+                    
                     <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                        <a href="<c:url value="/salle/list"/>">  <i class="glyphicon glyphicon-blackboard"></i> Salles</a>
                     </li>
-                </ul>
+                    
+                    <% if((session.getAttribute("typeUser")).equals(true)){%>
+	                    <li>
+	                        <a href="<c:url value="/utilisateur/list"/>">  <i class="fa fa-user"></i> Utilisateurs</a>
+	                    </li>
+	                    
+	                    <li>
+	                        <a href="<c:url value="/etablissement/list"/>">  <i class="fa fa-institution"></i> Etablissement</a>
+	                    </li>
+                    <%} %>
+<!--                     <li>
+                        <a href="http://localhost:8080//GestionScolaireWeb/classeMatiere/list"> Classe Matiere </a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost:8080//GestionScolaireWeb/classeProfesseur/list"> Classe Professeur </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://localhost:8080//GestionScolaireWeb/classeSalle/list"> Classe Salle </a>
+                    </li>
+                     -->
+                    <li>
+                        <a href="http://localhost:8080//GestionScolaireWeb/calendar"> <i class="fa fa-clock-o"> </i> Emplois du temps</a>
+                    </li>            
+                    
+                    </ul> 
             </div>
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
 
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                	<div style="height: 100px;"></div>
-					<div class="container">
-						<fieldset>
-							<legend>Edition de la liste des utilisateurs</legend>
-							<form:form modelAttribute="utilisateur" action="save" method="post">
-								<form:hidden path="id" />
-								<form:hidden path="version" />
-								<div class="form-group">
-									<form:label path="login">Login</form:label>
-									<form:input path="login" type="text" cssClass="form-control" cssStyle="width: 400px"/>
-								</div>
-								
-								<div class="form-group">
-									<form:label path="nom">Nom</form:label>
-									<form:input path="nom" type="text" cssClass="form-control" cssStyle="width: 400px"/>
-								</div>
-								
-								<div class="form-group">
-									<form:label path="prenom">Prenom</form:label>
-									<form:input path="prenom" type="text" cssClass="form-control" cssStyle="width: 400px"/>
-								</div>
-								
-								<div class="form-group">
-									<form:label path="motDePasseTemporaire">Mot de passe</form:label>
-									<form:input path="motDePasseTemporaire" type="text" cssClass="form-control" cssStyle="width: 400px"/>
-								</div>
-								
-								<div class="form-group">
-									<form:label path="adresse.rue">Rue</form:label>
-									<form:input path="adresse.rue" type="text" cssClass="form-control" cssStyle="width: 400px"/>
-								</div>
-								
-								<div class="form-group">
-									<form:label path="adresse.ville">Ville</form:label>
-									<form:input path="adresse.ville" type="text" cssClass="form-control" cssStyle="width: 400px"/>
-								</div>
-								
-								<div class="form-group">
-									<form:label path="adresse.codePostal">Code postal</form:label>
-									<form:input path="adresse.codePostal" type="text" cssClass="form-control" cssStyle="width: 400px"/>
-								</div>
-								
-								<div class="form-group">
-									<form:label path="adresse.pays">Pays</form:label>
-									<form:input path="adresse.pays" type="text" cssClass="form-control" cssStyle="width: 400px"/>
-								</div>
-								
-								<div class="form-group">
-									<form:label path="etablissement.id">Etablissement</form:label>
-									<form:select path="etablissement.id" id="etablissement.id" cssClass="form-control" cssStyle="width: 400px">
-										<form:option value="${null}">Veuillez choisir un etablissement</form:option>
-										<c:forEach items="${etablissements}" var="etablissement">
-											<form:option value="${etablissement.id}">${etablissement.nom}</form:option>
-										</c:forEach>
-										
-									</form:select>
-									<form:errors path="etablissement" cssStyle="color:red"/>					
-								</div>
-									
-								<button class="btn btn-success" type="submit">
-									<span class="glyphicon glyphicon-ok"></span>
-								</button>
-								<button class="btn btn-warning" type="button" onclick="window.location='../utilisateur/list';return false;">
-									<span class="glyphicon glyphicon-arrow-left"></span>
-								</button>
-							</form:form>
-						</fieldset>
-					</div>
-                <!-- /.row -->
-
-            </div>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->

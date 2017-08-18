@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: mizuro
 Build-Jdk: 1.8.0_131
 Created-By: Maven Integration for Eclipse
 
-=======
-Manifest-Version: 1.0
-Built-By: Andelai SUN
-Build-Jdk: 1.8.0_131
-Created-By: Maven Integration for Eclipse
-
->>>>>>> 66c11d5dfabc74f09082b24ddc604b2bcb7935b6
